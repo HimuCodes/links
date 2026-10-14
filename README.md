@@ -16,17 +16,19 @@ Open `http://localhost:8080`. The site can be deployed directly from the reposit
 
 ## Edit
 
-- `index.html` — identity, destinations, accessible link labels, and social metadata.
-- `style.css` — palette, local fonts, responsive spacing, hover/focus details, and reduced-motion support.
-- `script.js` — the India clock and the small blue-dot interaction.
-- `assets/` — font files and licenses, favicon, and social preview image.
-- `DESIGN.md` — the supplied redesign brief.
+The site is intentionally small and static. There is no build step or configuration layer to keep in sync.
 
-The Sound row uses the existing `https://soundcloud.com/himumusic` destination because `https://himu.me/sound` returned 404 when verified on 15 October 2026. When that page launches, change the row's URL, accessible name, new-tab attributes, and arrow together. Ecosystem destinations use → and external destinations use ↗. The email address was checked against `himu.me`: `tiwari.himanshu@proton.me`.
+- `index.html` — edit the identity copy, link destinations, descriptions, contact links, accessibility labels, and social metadata.
+- `style.css` — controls the warm-paper palette, typography, layout, responsive behavior, focus states, and restrained hover interactions.
+- `script.js` — contains only the live India clock and the small `h.` blue-dot interaction.
+- `resume.pdf` — replace this file in place to update the résumé while keeping `https://links.himu.me/resume.pdf` permanent.
+- `assets/` — self-hosted fonts and licenses, the favicon, and the social preview image.
+- `CNAME` — keeps the GitHub Pages custom domain at `links.himu.me`.
+- `DESIGN.md` — documents the visual direction and design decisions behind the current implementation.
 
-External profiles and the résumé open in a new tab, with an accessible description. The primary home link stays in the same tab. All primary rows are full-width anchors; hover details also appear on keyboard focus. Motion stops when reduced motion is requested, and the clock pauses while the page is hidden.
+When editing links, keep the existing navigation grammar: → for destinations inside the `himu.me` ecosystem and ↗ for external destinations. External links should continue to open in a new tab with the appropriate `rel` attributes; the main `himu.me` link stays in the current tab.
 
-The original résumé and custom domain are preserved. The previous starfield, background animations, unused configuration, and avatar have been retired.
+Keep the page lightweight. The primary rows should remain full-width links, keyboard focus should expose the same useful details as hover, and `prefers-reduced-motion` support should be preserved. The page is deliberately light-only and does not need a theme toggle.
 
 ## License
 

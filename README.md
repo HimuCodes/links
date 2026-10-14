@@ -1,70 +1,33 @@
-# 🚀 Nebula Links: A DIY Space-Themed Link Hub
+# links.himu.me
 
-## 🌌 Overview
+Himanshu Tiwari's small internet calling card. Five curated destinations, contact links, and a permanent résumé URL, on warm paper.
 
-Welcome to Nebula Links, a DIY alternative to the popular Linktree service! This project was born out of a desire for customization without the price tag. When Linktree started charging for advanced customization, I decided to take matters into my own hands and create a unique, space-themed link hub that's out of this world!
+Plain HTML, CSS, and a small deferred JavaScript file. No dependencies, build step, analytics, or third-party runtime requests. Links remain usable with JavaScript disabled. Geist and Newsreader are self-hosted; their SIL Open Font licenses are in `assets/fonts/`.
 
-## 🌟 Features
+## Preview
 
-- **Space-Inspired Design**: Immerse visitors in a cosmic experience with a dynamic starry background and nebula-like animations.
-- **Animated Profile Picture**: A floating profile picture with a mesmerizing nebula glow effect.
-- **Interactive Link Buttons**: Each link button has a captivating hover effect reminiscent of swirling galaxies.
-- **Responsive Layout**: Looks great on both desktop and mobile devices.
-- **Easy to Customize**: Simple HTML structure and CSS file for easy personalization.
+Serve the repository with any static HTTP server. For example, if Python is installed:
 
-## 🛠️ Technologies Used
+```sh
+python -m http.server 8080
+```
 
-- HTML5
-- CSS3 (with advanced animations and pseudo-elements)
-- JavaScript (for star animation)
+Open `http://localhost:8080`. The site can be deployed directly from the repository root with GitHub Pages or any static host. `CNAME` retains `links.himu.me`; `resume.pdf` retains its canonical path.
 
-## 📝 How It Works
+## Edit
 
-1. **HTML Structure**: The `index.html` file contains the basic structure of the page, including your profile information, links, and resume section.
+- `index.html` — identity, destinations, accessible link labels, and social metadata.
+- `style.css` — palette, local fonts, responsive spacing, hover/focus details, and reduced-motion support.
+- `script.js` — the India clock and the small blue-dot interaction.
+- `assets/` — font files and licenses, favicon, and social preview image.
+- `DESIGN.md` — the supplied redesign brief.
 
-2. **CSS Magic**: The `style.css` file is where the real magic happens:
-   - Space background with a panning effect
-   - Floating animation for the profile picture as 'profile.jpg'
-   - Nebula glow effects using CSS gradients and animations
-   - Interactive hover effects for all links
+The Sound row uses the existing `https://soundcloud.com/himumusic` destination because `https://himu.me/sound` returned 404 when verified on 15 October 2026. When that page launches, change the row's URL, accessible name, new-tab attributes, and arrow together. Ecosystem destinations use → and external destinations use ↗. The email address was checked against `himu.me`: `tiwari.himanshu@proton.me`.
 
-3. **JavaScript Flair**: A simple script creates twinkling stars in the background, adding depth to the space theme.
+External profiles and the résumé open in a new tab, with an accessible description. The primary home link stays in the same tab. All primary rows are full-width anchors; hover details also appear on keyboard focus. Motion stops when reduced motion is requested, and the clock pauses while the page is hidden.
 
-## 🚀 Getting Started
+The original résumé and custom domain are preserved. The previous starfield, background animations, unused configuration, and avatar have been retired.
 
-1. Clone this repository
-2. Modify the `index.html` file with your own information and links
-3. Customize the `style.css` file to match your preferred color scheme
-4. Replace the profile picture and add your own as profile-picture
-5. Deploy to your favorite hosting service (GitHub Pages works great!)
+## License
 
-## 💡 Why DIY?
-
-1. **Complete Control**: Tailor every aspect of your link hub to your liking.
-2. **No Recurring Costs**: Host it for free on platforms like GitHub Pages.
-3. **Learning Opportunity**: Enhance your HTML, CSS, and JavaScript skills.
-4. **Stand Out**: Create a unique online presence that reflects your personality.
-
-## 🌈 Customization Ideas
-
-- Change the color scheme to match your brand
-- Add more interactive elements or animations
-- Integrate with your own domain for a professional touch
-
-## 📸 Screenrecording
-
-![IMG-20240803-WA0145](https://github.com/user-attachments/assets/ca47ab2d-2aeb-4465-ad65-dc4559c1ebda)
-
-## 🤝 Contributing
-
-Feel free to fork this project and create your own awesome variations! If you make something cool, I'd love to see it. Open an issue or PR to share your creation!
-
-## 📜 License
-
-This project is open source and available under the [MIT License](LICENSE.md).
-
----
-
-Created with ❤️ and a bit of cosmic dust by Himu
-
-Remember, the stars are the limit! 🌠
+[MIT](LICENSE.md). Bundled fonts retain their own licenses.
